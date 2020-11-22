@@ -88,14 +88,26 @@ treePtr modifiedSearch(treePtr tree, int key)
 	while (tree)
 	{
 		if (key == tree->data) return NULL;
-		else if (key < tree->data) {
-			tempTree = tree;
+		tempTree = tree;
+		if (key < tree->data) {
 			tree = tree->lchild;
 		}
 		else {
-			tempTree = tree;
 			tree = tree->rchild;
 		}
 	}
 	return tempTree;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
